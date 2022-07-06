@@ -27,7 +27,7 @@ export class BooksPageComponent implements OnInit {
     }
 
   ngOnInit() {
-    this.store.dispatch(BooksPageActions.enter())
+    this.store.dispatch(BooksPageActions.enter());
     this.removeSelectedBook();
   }
 

@@ -9,6 +9,7 @@ import { UserModel } from "../models/user.model";
 })
 export class AuthService {
   login(username: string, password: string) {
+    console.log("login");
     if (password !== "password" || !username.trim()) {
       return throwError(new Error("Invalid username or password"));
     }

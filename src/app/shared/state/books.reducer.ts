@@ -28,7 +28,7 @@ export const booksReducer = createReducer(
         BooksPageActions.clearSelectedBook, 
         (state,action) => {
         return {
-            ...state,
+            ...state, 
             activeBookId: null
         }
     }),
@@ -39,10 +39,7 @@ export const booksReducer = createReducer(
         }
     }),
     on(BooksApiActions.booksLoaded, (state, action) => {
-        return {
-            ...state,
-            collection: action.books
-        }
+        return adapter.addMany(action.books,state)
     }),
     on(BooksApiActions.bookDeleted, (state,action) => {
         return adapter.removeOne(action.bookId,{
