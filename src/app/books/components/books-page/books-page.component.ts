@@ -40,7 +40,7 @@ export class BooksPageComponent implements OnInit {
   }
 
   removeSelectedBook() {
-    this.store.dispatch(BooksPageActions.clearSelectedBook())
+    this.store.dispatch(BooksPageActions.clearSelectedBook());
   }
 
   onSave(book: BookRequiredProps | BookModel) {
